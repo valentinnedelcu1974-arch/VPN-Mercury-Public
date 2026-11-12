@@ -1,49 +1,39 @@
-# VPN Mercury — Support and Privacy
+# Mercury Network — Support and Privacy
 
-Updated: 12 November 2026. Applies to VPN Mercury iOS 1.0, including OpenVPN/VPN Gate and manual IKEv2.
+Updated 12 November 2026. This policy applies to Mercury Network iOS 1.0, build 18 and later. Build 18 replaces the former VPN implementation with a local network monitor. It has no VPN tunnel, VPN servers, account, advertising SDK or active subscription. Policies for earlier VPN builds remain available in this repository's version history.
 
 ## Support
 
-Developer: Iulian Valentin Nedelcu (NEDELCU IULIAN VALENTIN PFA).
+Developer: Iulian Valentin Nedelcu (NEDELCU IULIAN VALENTIN PFA). Contact: valentin.nedelcu@icloud.com.
 
-Contact: [valentin.nedelcu@icloud.com](mailto:valentin.nedelcu@icloud.com).
+For help, provide the app build, iOS version, connection type and the exact error. Do not send router passwords, Wi-Fi passwords, private keys or sensitive network details. Diagnostic export is optional and goes only to the recipient you choose.
 
-For help, provide the app build, iOS version, server hostname, Wi-Fi/mobile data and exact error. Never send passwords, private keys or personal traffic. Diagnostic export is optional and goes only to the recipient you choose.
+Mercury Network shows the connection path reported by iOS and foreground byte-counter changes on this device's physical network interfaces. Counters may include local traffic and other applications. They are not billable Internet usage, monthly history or router-wide usage. Observation pauses when the app is not active. Connected indicates an available iOS network path; it does not guarantee access past a captive portal.
 
-Open VPN gratuit, read the operator disclosure, refresh the VPN Gate list, select a relay, accept the logging policy and tap Salvează și conectează. Approve the iOS VPN configuration. Connected means iOS reports an active tunnel; Disconnected means it is inactive. An HTTPS response or server list does not prove VPN authentication. Volunteer relays may be unavailable; try another relay or network. Manual IKEv2 needs credentials and certificate identity for the exact server. Never disable certificate validation.
-
-Mercury operates no gateways and promises no particular country, uptime, speed, anonymity or leak protection. There is no active Mercury subscription or charge in this version.
+Bonjour discovery starts only after an explicit action and requires iOS Local Network permission. It displays advertised service names and can be incomplete or contain multiple names for one device. It does not claim the exact number of Wi-Fi clients. The exact count must come from the router's management interface; automated integration depends on the router model. Use discovery only on networks you are authorized to administer. The app can open a user-entered private IPv4 router address in Safari over HTTPS; Mercury does not receive the router credentials.
 
 ## Privacy policy
 
-### On-device information
+### Local processing
 
-Server settings, usernames and preferences stay on the device. VPN passwords are stored in Apple Keychain. Imported configurations and certificates configure the iOS tunnel. This version has no advertising or analytics SDK, advertising identifier, Mercury account or developer-operated data-collection backend.
+Network state, interface addresses, observed byte counters and Bonjour results are processed in memory on your device. The app does not upload those measurements or nearby-device names to a Mercury server. It does not inspect packet contents, browsing history, Wi-Fi passwords or router passwords. It does not read an advertising identifier or use analytics or cross-app tracking. There is no Mercury data-collection backend or third-party analytics SDK.
 
-### VPN operators and logging
+### Optional network requests
 
-Refreshing the directory sends your public IP and required network metadata to VPN Gate. Connecting sends traffic through the selected relay. The operator sees your source IP, connection metadata and traffic destinations. Visibility of content depends on the encryption used by the originating apps.
+If you tap the HTTPS test, the app sends a HEAD request to https://www.apple.com/library/test/success.html. Apple receives the source IP and normal HTTP/TLS connection metadata under its own privacy policy: https://www.apple.com/legal/privacy/. Local device lists and traffic-counter readings are not included. Mercury does not receive Apple's server logs. The timing includes DNS and TLS and is not an Internet throughput test. Bonjour requests stay on the local network and disclose the requested service types to local devices. No test or discovery is started automatically.
 
-VPN Gate records connection dates, source/server IPs and hostnames, client/protocol details, packet/byte counts, errors and destination hostnames/IPs/ports. Central connection logs are retained at least three months; volunteer relays retain packet-header logs at least two weeks. Operators may disclose logs through their legal processes. Mercury cannot access, delete or control those logs.
+### Manual sharing and support
 
-Read the [official VPN Gate logging policy](https://www.vpngate.net/en/about_abuse.aspx) before connecting. Mercury is not affiliated with VPN Gate. Manual IKEv2 operators, including VPN Jantit presets, have independent policies that you must review before supplying credentials. Servers can be in other countries; choose an operator and jurisdiction you trust.
+Diagnostics are shared only if you explicitly export them through the iOS share sheet. The generated report includes time, connection state/type, foreground traffic totals, HTTPS result and service-name count. It omits discovered-device names and local IP addresses. The destination you choose controls its copy. Support receives your email and any content you voluntarily send and uses it to answer your request. Request deletion of developer-held correspondence by email; an unresolved support request or a legal obligation may require retention. Support is optional and no account is required.
 
-### Diagnostics, support and purposes
+### Choices and retention
 
-The optional HTTPS check sends a HEAD request to the configured domain only when requested, exposing IP and HTTP/TLS metadata to that destination. It is not a tunnel or DNS-leak test. Diagnostics stay local unless exported. Support receives your email and the material you voluntarily send, for resolving your request. Request deletion by email; correspondence may be retained for an unresolved issue or legal obligation. Do not send sensitive material.
+Metrics are held in memory and are not a permanent usage history. Reset the session to clear traffic samples. Stop discovery or deny/revoke Local Network permission in iOS Settings. Leaving the foreground stops monitoring. Closing the app clears in-memory measurements; exported copies must be removed from their chosen destinations separately. There is no developer account or remotely stored monitoring dataset to delete. Independent websites and router interfaces have their own privacy and security practices.
 
-Network information is used for connectivity, directory access, diagnosis, security and abuse prevention. Mercury does not sell user data or use it for advertising or cross-app tracking. Independent operators control their processing; Apple and websites have their own policies.
+### Changes
 
-### Choices, deletion and changes
-
-Do not connect if you reject the operator's policy. Disconnect to stop routing. Remove profiles in iOS Settings > General > VPN & Device Management; use the app deletion action for the manual profile/password. Remove saved configurations and uninstall when no longer needed. Contact support about developer-held correspondence; operator-log requests go to the operator and retention may be mandatory. No zero-logging or absolute-anonymity claim is made.
-
-This is a general-purpose networking utility, not a children's service. Its content rating is not a privacy guarantee. This page will be updated when practices change.
+This page will be updated if app functionality or data practices change. The app has no advertising, data sale or paid subscription. It is a general-purpose network utility. Contact support with privacy questions.
 
 ## Informații în română
 
-Suport: valentin.nedelcu@icloud.com. Nu trimite parole sau chei private. Configurarea rămâne pe dispozitiv, iar parolele în Keychain. Actualizarea listei transmite IP-ul către VPN Gate. Operatorul VPN vede datele conexiunii și destinațiile traficului. VPN Gate păstrează jurnale de conexiune minimum trei luni și antete de pachete minimum două săptămâni. Mercury nu controlează aceste jurnale și nu garantează anonimat absolut. Consultă politica operatorului înainte de conectare. Exportul diagnosticului și suportul sunt opționale; nu există reclame sau abonament Mercury activ.
-
-## Third-party notices
-
-TunnelKit is used under GPLv3 with its additional App Store permission; dependencies retain their own licenses. Corresponding source and license notices must accompany distributed builds. Contact support for a specific build's source if not listed in this repository. VPN Gate permits clients to use its official CSV directory: [official directory](https://www.vpngate.net/en/). No affiliation or exclusive rights are claimed.
+Mercury Network, începând cu buildul 18, este un monitor de rețea fără VPN. Starea conexiunii, adresele locale, traficul observat și rezultatele Bonjour sunt prelucrate în memoria dispozitivului. Nu sunt încărcate pe un server Mercury. Nu inspectăm conținutul traficului, istoricul de navigare sau parolele. Descoperirea locală și testul HTTPS pornesc numai la cerere. Testul HTTPS contactează Apple, care vede IP-ul și metadatele conexiunii; nu primește lista dispozitivelor locale. Contoarele nu sunt consum facturat sau trafic total al routerului. Lista Bonjour este parțială și nu este un număr exact de clienți Wi-Fi. Exportul diagnosticului și suportul prin e-mail sunt opționale. Monitorizarea se oprește în fundal. Contact: valentin.nedelcu@icloud.com. Nu trimite parole sau date sensibile.
