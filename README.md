@@ -1,3 +1,17 @@
+# iXMercury Network Home
+
+**In development / pre-release. The rebuilt iOS candidate is not yet compiled, device-tested or publicly available. No public download or release date is available.**
+
+A home-network inventory and observation app for iPhone and iPad. The source candidate adds household device records organized by family member and room, user-assigned recognition labels, saved Bonjour observation comparisons, foreground device-interface traffic charts and optional HTTPS connectivity checks.
+
+Inventory records do not prove online presence. Bonjour observations are incomplete and do not count all router clients. Traffic counters describe this device, not the entire router or individual family members. No person tracking, packet inspection or VPN is provided.
+
+## Pre-release privacy additions
+
+The new source candidate stores inventory and up to 30 saved Bonjour observations in a protected local file. Inventory may include user-entered names, rooms and device notes. iOS backups may include these files according to device settings. Manual inventory sharing includes those user-entered details; check the recipient before exporting. Inventory entries can be edited or deleted locally. No inventory is uploaded to a Mercury backend. The earlier build 18 policy below applies only to the earlier network-monitor implementation, which does not contain the new household workflow.
+
+---
+
 # Mercury Network — Support and Privacy
 
 Updated 12 November 2026. This policy applies to Mercury Network iOS 1.0, build 18 and later. Build 18 replaces the former VPN implementation with a local network monitor. It has no VPN tunnel, VPN servers, account, advertising SDK or active subscription. Policies for earlier VPN builds remain available in this repository's version history.
